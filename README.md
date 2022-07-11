@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+1. creare un nuovo progetto react che chiamerete `react-exercises`
+2. creare dal branch master un branch develop. Es: git checkout -b develop
+3. creare dal branch develop il branch del capitolo. Es: git checkout -b basic-concepts.
+4. per ogni esercizio create un nuovo branch dal branch del capitolo. Es: git checkout -b components-01
+5. terminato l'esercizio, effettuate il merge del branch esercizio nel branch capitolo.
+6. dopo il merge create il nuovo branch per l'esercizio successivo, sempre partendo dal branch del capitolo.
+7. una volta terminati tutti gli esercizi del capitolo, effetutate il merge del branch capitolo in develop.
+8. dopo il merge in develop, create il branch del capitolo successivo e ricominciate dal punto 4
+9. Chiamate i branch con il nome dell'esercizio come scritto di seguito e seguite questa suddivisione degli esercizi.
+    quindi il primo branch che creerete da `develop` sarà il branch `basic-concepts`, dal branch `basic-concepts` creerete il branch `components-01` nel quale svolgerete il relativo esercizio.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## basic-concepts
+- components-01
+- components-02
+- components-03
+- components-04
+- components-06
+- components-07
+- props-01
+- props-02
+- props-03
+- props-04
+- props-05
+- conditional-rendering-01
+- conditional-rendering-02
+- conditional-rendering-03
+- conditional-rendering-04
+- conditional-rendering-05
+- state-01
+- state-03
+- state-04
+- component-lifecycle-01
 
-## Available Scripts
+## Forms-Lists-and-Styling
+- events-01
+- events-03
+- forms-01
+- forms-02
+- forms-03
+- forms-04
+- forms-05
+- forms-06
+- lists-03
+- lists-04
+- lists-05
+- lists-06
+- styling-components-01
+- styling-components-03
 
-In the project directory, you can run:
+## Composition
+- component-composition-02
+- component-composition-01
+- render-props-01
+- context-01
+- context-02
 
-### `npm start`
+## Function-components-and-hooks
+- function Components - 01
+- function Components - 02
+- function Components - 03
+- useState-01
+- useState-02
+- useEffect-01
+- useEffect-02
+- useEffect-03
+- useEffect-04
+- custom-hooks-01
+- custom-hooks-02
+- custom-hooks-03
+- custom-hooks-04
+- useCallback
+- useMemo
+- useRef-02
+- useContext
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## External-Libraries
+- react-router-01
+- react-router-02
+- react-router-03
+- react-router-04
+- react-router-05
+- react-router-06
+- react-router-07
+- swr-01
+- swr-02
+- swr-03
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## redux
+- redux-01
+- redux-02
+- redux-03
+- redux-04
+- redux-05
