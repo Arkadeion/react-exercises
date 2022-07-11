@@ -1,6 +1,6 @@
 import React from "react";
-import { App } from "./App";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client";
+import { HelloWorld } from "./HelloWorld";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root')
@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <App />
+        <HelloWorld />
     </React.StrictMode>
 );
