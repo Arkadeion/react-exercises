@@ -8,7 +8,7 @@ export class Welcome extends React.Component {
             <div>
                 <p>Welcome, {this.props.name}!</p>
                 <Age age={this.props.age} />
-                <Counter />
+                <Counter initialValue={0} increaseValue={1} interval={1000} />
             </div>
         )
     }
