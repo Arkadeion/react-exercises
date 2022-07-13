@@ -7,7 +7,7 @@ export class Counter extends React.Component {
         count: this.props.initialValue,
     }
 
-    componentDidMount() {
+    componentDidMount() { // If the interval is initialized with a life cycle method, the constructor is not required
         setInterval(() => {
             this.setState(() => {
                 return {
