@@ -6,6 +6,12 @@ import { Counter } from "./Counter";
 import { Login } from "./Login";
 
 export class Welcome extends React.Component {
+
+    onLogin = (event) => {
+        event.preventDefault();
+        return console.log('Login Successful!');
+    }
+
     render() {
         return (
             <div>
@@ -14,7 +20,7 @@ export class Welcome extends React.Component {
                 <Counter initialValue={0} increaseValue={1} interval={1000} />
                 <ClickCounter />
                 <ClickTracker />
-                <Login />
+                <Login _onLogin={this.onLogin} />
             </div>
         )
     }
