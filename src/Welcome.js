@@ -3,6 +3,7 @@ import { Age } from "./Age";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
+import { Login } from "./Login";
 
 export class Welcome extends React.Component {
     render() {
@@ -13,6 +14,7 @@ export class Welcome extends React.Component {
                 <Counter initialValue={0} increaseValue={1} interval={1000} />
                 <ClickCounter />
                 <ClickTracker />
+                <Login />
             </div>
         )
     }
