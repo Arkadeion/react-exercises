@@ -5,27 +5,39 @@ export class Login extends React.Component {
     state = {
         username: '',
         password: '',
-        checkbox: 'false',
+        checkbox: false,
         loginButton: 'disabled'
     }
 
     handleInput = (event) => {
 
-        let inputValue = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
         let name = event.target.name;
+        let value = event.target.value;
+        let type = event.target.type;
+        let checked = event.target.checked;
 
         this.setState({
-            [name]: inputValue
+            [name]: type === 'checkbox' ? checked : value,
+        })
+    }
+
+    handleResetForm = () => {
+        this.setState({
+            username: '',
+            password: '',
+            checkbox: false
         })
     }
 
     render() {
         return (
             <div>
-                <input name="username" value={this.state.value} onChange={this.handleInput} />
-                <input name="password" type='password' value={this.state.value} onChange={this.handleInput} />
-                <input name="checkbox" type='checkbox' value={this.state.value} onChange={this.handleInput} />
+                <h1>Login Form</h1>
+                <input name="username" value={this.state.username} onChange={this.handleInput} />
+                <input name="password" type='password' value={this.state.password} onChange={this.handleInput} />
+                <input name="checkbox" type='checkbox' checked={this.state.checkbox} onChange={this.handleInput} />
                 <button name="submit" type='submit' disabled={!this.state.username || !this.state.password} onClick={this.props._onLogin}>Login</button>
+                <button onClick={this.handleResetForm} >Reset</button>
             </div>
         )
     }
