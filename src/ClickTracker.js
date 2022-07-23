@@ -15,7 +15,7 @@ export class ClickTracker extends React.Component {
 
             } else {
                 return {
-                    lastButtonPressed: event.target.innerHTML
+                    lastButtonPressed: event.target.id
                 }
             }
         })
@@ -26,9 +26,9 @@ export class ClickTracker extends React.Component {
             <div>
                 <h1>Last button pressed: {this.state.lastButtonPressed} </h1>
                 <div id='button-wrapper' onClick={this.trackLastButtonClicked}>
-                    <button>Button 1</button>
-                    <button>Button 2</button>
-                    <button>Button 3</button>
+                    <button id='cat' style={{ height: 100, width: 100, backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg)', backgroundSize: 'cover' }} ></button>
+                    <button id='dog' style={{ height: 100, width: 100, backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg)', backgroundSize: 'cover' }} ></button>
+                    <button id='chipmunk' style={{ height: 100, width: 100, backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Streifenhoernchen.jpg/640px-Streifenhoernchen.jpg)', backgroundSize: 'cover' }} ></button>
                 </div>
             </div>
         )
