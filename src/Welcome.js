@@ -1,5 +1,6 @@
 import React from "react";
 import { Age } from "./Age";
+import { ClickCounter } from "./ClickCounter";
 import { Counter } from "./Counter";
 
 export class Welcome extends React.Component {
@@ -9,6 +10,7 @@ export class Welcome extends React.Component {
                 <p>Welcome, {this.props.name}!</p>
                 <Age age={this.props.age} />
                 <Counter initialValue={0} increaseValue={1} interval={1000} />
+                <ClickCounter />
             </div>
         )
     }
