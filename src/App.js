@@ -1,13 +1,13 @@
 import React from "react";
 import { HelloWorld } from "./HelloWorld";
-import { Welcome } from "./Welcome";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 export class App extends React.Component {
     render() {
         return (
             <div>
                 <HelloWorld  />
-                <Welcome name='John' age={28} />
+                <InteractiveWelcome />
             </div>
         )
     }
