@@ -25,7 +25,7 @@ export class Login extends React.Component {
         this.setState({
             username: '',
             password: '',
-            checkbox: false
+            remember: false
         })
     }
 
@@ -41,8 +41,14 @@ export class Login extends React.Component {
             <div>
                 <input name="username" value={this.state.username} onChange={this.handleInput} />
                 <input name="password" type='password' value={this.state.password} onChange={this.handleInput} />
+<<<<<<< HEAD
                 <input name="remember" type='checkbox' value={this.state.remember} onChange={this.handleInput} />
                 <button name="submit" type='submit' disabled={!this.state.username || !this.state.password} onClick={this.getFormData}>Login</button>
+=======
+                <input name="remember" type='checkbox' checked={this.state.remember} onChange={this.handleInput} />
+                <button name="submit" type='submit' disabled={!this.state.username || !this.state.password} onClick={this.getFormData}>Login</button>
+                <button onClick={this.handleResetForm} >Reset</button>
+>>>>>>> forms-04
             </div>
         )
     }
