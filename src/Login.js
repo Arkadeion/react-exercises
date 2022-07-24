@@ -5,7 +5,7 @@ export class Login extends React.Component {
     state = {
         username: '',
         password: '',
-        checkbox: 'false'
+        remember: 'checked'
     }
 
     handleInput = (event) => {
@@ -24,7 +24,7 @@ export class Login extends React.Component {
             <div>
                 <input name="username" value={this.state.username} onChange={this.handleInput} />
                 <input name="password" type='password' value={this.state.password} onChange={this.handleInput} />
-                <input name="checkbox" type='checkbox' value={this.state.checkbox} onChange={this.handleInput} />
+                <input name="remember" type='checkbox' value={this.state.remember} onChange={this.handleInput} />
             </div>
         )
     }
