@@ -7,11 +7,6 @@ import { Login } from "./Login";
 
 export class Welcome extends React.Component {
 
-<<<<<<< HEAD
-    state = {};
-
-=======
->>>>>>> forms-04
     onLogin = (data) => {
         console.log(data);
     }
