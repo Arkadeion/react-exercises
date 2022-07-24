@@ -5,7 +5,7 @@ export class Login extends React.Component {
     state = {
         username: '',
         password: '',
-        remember: 'checked'
+        remember: false
     }
 
     handleInput = (event) => {
