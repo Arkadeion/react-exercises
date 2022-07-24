@@ -7,9 +7,10 @@ import { Login } from "./Login";
 
 export class Welcome extends React.Component {
 
-    onLogin = (event) => {
-        event.preventDefault();
-        return console.log('Login Successful!');
+    state = {};
+
+    onLogin = (data) => {
+        console.log(data);
     }
 
     render() {
