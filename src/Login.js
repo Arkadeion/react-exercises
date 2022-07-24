@@ -29,14 +29,20 @@ export class Login extends React.Component {
         })
     }
 
+    getFormData = (event) => {
+
+        event.preventDefault();
+        this.props._onLogin(this.state);
+
+    }
+
     render() {
         return (
             <div>
-                <h1>Login Form</h1>
                 <input name="username" value={this.state.username} onChange={this.handleInput} />
                 <input name="password" type='password' value={this.state.password} onChange={this.handleInput} />
                 <input name="remember" type='checkbox' checked={this.state.remember} onChange={this.handleInput} />
-                <button name="submit" type='submit' disabled={!this.state.username || !this.state.password} onClick={this.props._onLogin}>Login</button>
+                <button name="submit" type='submit' disabled={!this.state.username || !this.state.password} onClick={this.getFormData}>Login</button>
                 <button onClick={this.handleResetForm} >Reset</button>
             </div>
         )
