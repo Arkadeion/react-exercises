@@ -3,11 +3,11 @@ import React from "react";
 export class TodoList extends React.Component {
 
     state = {
-        items: ['Go to work', 'Go to the gym', 'Clean up the house']
+        items: ['Go to work', 'Go to the gym', 'Clean up the house', 'Sleep']
     }
 
     addNewTodo = (event) => {
-        
+
         let newTodo = event.target.previousSibling.value;
 
         let _items = [...this.state.items]
@@ -17,9 +17,8 @@ export class TodoList extends React.Component {
         this.setState({
             items: _items
         })
-        
-        event.target.previousSibling.value = '';
 
+        event.target.previousSibling.value = '';
     }
 
     render() {
