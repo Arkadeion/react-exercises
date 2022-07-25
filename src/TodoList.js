@@ -21,12 +21,21 @@ export class TodoList extends React.Component {
         event.target.previousSibling.value = '';
     }
 
+    clearTodos = () => {
+
+        this.setState({
+            items: [],
+        })
+        
+    }
+
     render() {
         return (
             <div>
                 <div>
                     <input name="newTodo" />
                     <button onClick={this.addNewTodo} >Add Item</button>
+                    <button onClick={this.clearTodos} >Clear All Todos</button>
                 </div>
                 <div>
                     <ul>
