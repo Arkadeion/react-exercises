@@ -5,6 +5,7 @@ import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
 import { Counter } from "./Counter";
 import { Login } from "./Login";
+import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class Welcome extends React.Component {
@@ -24,6 +25,7 @@ export class Welcome extends React.Component {
                 <Login _onLogin={this.onLogin} />
                 <UncontrolledLogin _onLogin={this.onLogin} />
                 <Colors items={[{id: 1, name:'Green'}, {id: 2, name:'Red'}, {id: 3, name:'Blue'}, {id: 4, name:'Black'}]} />
+                <TodoList />
             </div>
         )
     }
