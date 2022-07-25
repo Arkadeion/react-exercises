@@ -26,7 +26,21 @@ export class TodoList extends React.Component {
         this.setState({
             items: [],
         })
-        
+
+    }
+
+    removeTodo = (event) => {
+
+        let todoToDelete = event.target.parentElement.id;
+
+        let _items = [...this.state.items]
+
+        _items.splice(todoToDelete, 1);
+
+        this.setState({
+            items: _items
+        })
+
     }
 
     render() {
@@ -39,7 +53,7 @@ export class TodoList extends React.Component {
                 </div>
                 <div>
                     <ul>
-                        {this.state.items.map((todo) => <li>{todo}</li>)}
+                        {this.state.items.map((todo, index) => <li id={index} key={index} >{todo} <button onClick={this.removeTodo} >Remove Todo</button></li>)}
                     </ul>
                 </div>
             </div>
