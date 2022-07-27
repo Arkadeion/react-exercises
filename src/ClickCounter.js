@@ -19,8 +19,8 @@ export class ClickCounter extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>
+            <div className="bg-white rounded-xl border-2 border-black max-w-fit p-4 mb-8" >
+                <h1 className="text-xl font-bold">
                     Counter: {this.state.count}
                 </h1>
                 <CounterButton incrementCounterOnClick={this.incrementCounterOnClick} />

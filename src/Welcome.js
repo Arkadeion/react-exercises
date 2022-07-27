@@ -3,6 +3,7 @@ import { Age } from "./Age";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
+import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
@@ -16,9 +17,9 @@ export class Welcome extends React.Component {
 
     render() {
         return (
-            <div>
-                <div> {/* Ho applicato la classe a Interactive Welcome invece che a Welcome perché Interactive Welcome lo contiene */}
-                    <p>Welcome, {this.props.name}!</p>
+            <div >
+                <div className="bg-white rounded-xl border border-red-700 p-3 mb-5 max-w-xs">
+                    <h1 className="text-2xl font-bold mb-4">Welcome, {this.props.name}!</h1>
                     <Age age={this.props.age} />
                 </div>
                 <div>
@@ -28,7 +29,11 @@ export class Welcome extends React.Component {
                     <Login _onLogin={this.onLogin} />
                     <UncontrolledLogin _onLogin={this.onLogin} />
                     <Colors items={[{ id: 1, name: 'Green' }, { id: 2, name: 'Red' }, { id: 3, name: 'Blue' }, { id: 4, name: 'Black' }]} />
-                    <TodoList />
+                    <Container>
+                        <h1 className="text-2xl font-bold mb-4">This is a Todo List</h1>
+                        <TodoList />
+                    </Container>
+
                 </div></div>
 
         )

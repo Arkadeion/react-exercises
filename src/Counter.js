@@ -19,7 +19,9 @@ export class Counter extends React.Component {
 
     render() {
         return (
-            <CounterDisplay count={this.state.count} />
+            <div className="bg-white rounded-xl border-2 border-black max-w-fit p-4 mb-8">
+                <CounterDisplay count={this.state.count} />
+            </div>
         )
     }
 }

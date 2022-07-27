@@ -17,17 +17,19 @@ export class UncontrolledLogin extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="bg-white rounded-xl border-2 border-black max-w-fit p-4 mb-8">
                 <div>
-                    <h1>Uncontrolled Form</h1>
+                    <h1 className="text-2xl font-bold mb-4">Uncontrolled Form</h1>
                 </div>
                 <div>
                     <form onSubmit={this.handleSubmit}>
-                        <input name="username" />
-                        <input name="password" type='password' />
-                        <input name="remember" type='checkbox' />
-                        <button name="submit" type='submit' >Login</button>
-                        <button type="reset" >Reset</button>
+                    <label className="text-lg mr-3">Username:</label>
+                        <input className="border-black border-2 mr-3" name="username" />
+                        <label className="text-lg mr-3">Password:</label>
+                        <input className="border-black border-2 mr-3" name="password" type='password' />
+                        <input className="mr-3" name="remember" type='checkbox' />
+                        <button className='rounded-xl border-black border-2 p-1 mr-3' name="submit" type='submit' >Login</button>
+                        <button className='rounded-xl border-black border-2 p-1 mr-3' type="reset" >Reset</button>
                     </form>
                 </div>
             </div>
