@@ -5,10 +5,22 @@ import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class Welcome extends React.Component {
+
+    state = {
+        language: 'en',
+    }
+
+    handleLanguageChange = (event) => {
+        this.setState({
+            language: event.target.value
+        })
+    }
 
     onLogin = (data) => {
         console.log(data);
@@ -22,6 +34,19 @@ export class Welcome extends React.Component {
                     <Age age={this.props.age} />
                 </div>
                 <div>
+                    <div>
+                        <select value={this.state.language} onChange={this.handleLanguageChange}>
+                            <option value='en'>
+                                ENGLISH
+                            </option>
+                            <option value='it'>
+                                ITALIANO
+                            </option>
+                        </select>
+                    </div>
+                    <LanguageContext.Provider value={this.state.language}>
+                        <DisplayLanguage />
+                    </LanguageContext.Provider>
                     <Counter initialValue={0} increaseValue={1} interval={1000} />
                     <ClickCounter />
                     <ClickTracker />
