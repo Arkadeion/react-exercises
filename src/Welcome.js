@@ -6,7 +6,6 @@ import { Colors } from "./Colors";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { Login } from "./Login";
-import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class Welcome extends React.Component {
@@ -29,11 +28,7 @@ export class Welcome extends React.Component {
                     <Login _onLogin={this.onLogin} />
                     <UncontrolledLogin _onLogin={this.onLogin} />
                     <Colors items={[{ id: 1, name: 'Green' }, { id: 2, name: 'Red' }, { id: 3, name: 'Blue' }, { id: 4, name: 'Black' }]} />
-                    <Container title="Todo List Container">
-                        <h1 className="text-2xl font-bold mb-4">This is a Todo List</h1>
-                        <TodoList />
-                    </Container>
-
+                    <Container title="Todo List Container" />
                 </div></div>
 
         )

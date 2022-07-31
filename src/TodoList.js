@@ -52,9 +52,7 @@ export class TodoList extends React.Component {
                     <button className="rounded-xl border-black border-2 p-1" onClick={this.clearTodos} >Clear All Todos</button>
                 </div>
                 <div>
-                    <ul className="list-decimal list-inside mt-8">
-                        {this.state.items.map((todo, index) => <li className="text-xl font-semibold mb-4" id={index} key={index} >{todo} <button className="text-base font-normal rounded-xl border-black border-2 p-1 bg-slate-400" onClick={this.removeTodo} >Remove Todo</button></li>)}
-                    </ul>
+                   {this.props.render(this.state.items, this.removeTodo)}
                 </div>
             </div>
 
