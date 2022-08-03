@@ -8,6 +8,7 @@ import { Counter } from "./Counter";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { Login } from "./Login";
+import { Sum } from "./Sum";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class Welcome extends React.Component {
@@ -54,6 +55,7 @@ export class Welcome extends React.Component {
                     <UncontrolledLogin _onLogin={this.onLogin} />
                     <Colors items={[{ id: 1, name: 'Green' }, { id: 2, name: 'Red' }, { id: 3, name: 'Blue' }, { id: 4, name: 'Black' }]} />
                     <Container title="Todo List Container" />
+                    <Sum numbers={[142, 12, 6, 5]} />
                 </div></div>
 
         )
