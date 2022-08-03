@@ -55,7 +55,7 @@ export class Welcome extends React.Component {
                     <UncontrolledLogin _onLogin={this.onLogin} />
                     <Colors items={[{ id: 1, name: 'Green' }, { id: 2, name: 'Red' }, { id: 3, name: 'Blue' }, { id: 4, name: 'Black' }]} />
                     <Container title="Todo List Container" />
-                    <Sum numbers={[142, 12, 6, 5]} />
+                    <Sum />
                 </div></div>
 
         )
