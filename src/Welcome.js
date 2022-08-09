@@ -27,6 +27,10 @@ export class Welcome extends React.Component {
         console.log(data);
     }
 
+    onCounterChange = (counter) => {
+        return console.log(`The current value of the counter is: ${counter}`)
+    }
+
     render() {
         return (
             <div >
@@ -49,7 +53,7 @@ export class Welcome extends React.Component {
                         <DisplayLanguage />
                     </LanguageContext.Provider>
                     <Counter initialValue={0} increaseValue={1} interval={1000} />
-                    <ClickCounter />
+                    <ClickCounter onCounterChange={this.onCounterChange} initialValue={0} />
                     <ClickTracker />
                     <Login _onLogin={this.onLogin} />
                     <UncontrolledLogin _onLogin={this.onLogin} />
