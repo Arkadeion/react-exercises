@@ -1,6 +1,4 @@
-import React from "react";
-
-export class Login extends React.Component {
+/* export class Login extends React.Component {
 
     state = {
         username: '',
@@ -49,4 +47,53 @@ export class Login extends React.Component {
             </div>
         )
     }
+} */
+
+import { useState } from "react"
+
+export function Login(props) {
+
+    const [data, setData] = useState({
+        username: '',
+        password: '',
+        remember: false   
+    })
+
+    function handleInput(event) {
+        const { name, type, value, checked } = event.target
+
+        setData(data => {
+            return{
+                ...data,
+                [name]: type === 'checkbox' ? checked : value,
+            }
+        })
+    }
+
+    function getFormData(event) {
+
+        event.preventDefault();
+        props._onLogin(data);
+    }
+
+    function handleResetForm() {
+        
+        setData({
+            username: '',
+            password: '',
+            remember: false   
+        }) 
+    }
+
+    return (
+        <div className="bg-white rounded-xl border-2 border-black max-w-fit p-4 mb-8">
+            <label className="text-lg mr-3">Username:</label>
+            <input className="border-black border-2 mr-3" name="username" value={data.username} onChange={handleInput} />
+            <label className="text-lg mr-3">Password:</label>
+            <input className="border-black border-2 mr-3" name="password" type='password' value={data.password} onChange={handleInput} />
+            <input className="mr-3" name="remember" type='checkbox' checked={data.remember} onChange={handleInput} />
+            <button name="submit" type='submit' disabled={!data.username || !data.password} style={{ color: 'black' }} className={data.password.length < 8 ? 'rounded-xl border-black border-2 p-1 mr-3 login-unavailable' : 'rounded-xl border-black border-2 p-1 mr-3 login-available'} onClick={getFormData}>Login</button>
+            <button className='rounded-xl border-black border-2 p-1 mr-3' onClick={handleResetForm} >Reset</button>
+        </div>
+    )
 }
