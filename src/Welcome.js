@@ -6,7 +6,7 @@ import { Colors } from "./Colors";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { DisplayLanguage } from "./DisplayLanguage";
-import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 import { LanguageContext } from "./LanguageContext";
 import { Login } from "./Login";
 import { Sum } from "./Sum";
@@ -61,7 +61,7 @@ export class Welcome extends React.Component {
                     <Colors items={[{ id: 1, name: 'Green' }, { id: 2, name: 'Red' }, { id: 3, name: 'Blue' }, { id: 4, name: 'Black' }]} />
                     <Container title="Todo List Container" />
                     <Sum />
-                    <GithubUser username={'Arkadeion'} />
+                    <GithubUserList />
                 </div></div>
 
         )
