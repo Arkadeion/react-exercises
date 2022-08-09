@@ -1,5 +1,4 @@
 import React from "react";
-import { HelloWorld } from "./HelloWorld";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import './index.css';
 
