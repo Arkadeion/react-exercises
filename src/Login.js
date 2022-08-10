@@ -49,41 +49,11 @@
     }
 } */
 
-import { useState } from "react"
+import { useLogin } from "./useLogin"
 
-export function Login(props) {
+export function Login({ _onLogin }) {
 
-    const [data, setData] = useState({
-        username: '',
-        password: '',
-        remember: false   
-    })
-
-    function handleInput(event) {
-        const { name, type, value, checked } = event.target
-
-        setData(data => {
-            return{
-                ...data,
-                [name]: type === 'checkbox' ? checked : value,
-            }
-        })
-    }
-
-    function getFormData(event) {
-
-        event.preventDefault();
-        props._onLogin(data);
-    }
-
-    function handleResetForm() {
-        
-        setData({
-            username: '',
-            password: '',
-            remember: false   
-        }) 
-    }
+   const { data, handleInput, getFormData, handleResetForm } = useLogin({ _onLogin })
 
     return (
         <div className="bg-white rounded-xl border-2 border-black max-w-fit p-4 mb-8">
