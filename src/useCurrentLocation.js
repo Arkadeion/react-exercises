@@ -26,12 +26,11 @@ export function useCurrentLocation() {
 
     function getCurrentLocation(position) {
 
-        const currentLocation = position.coords;
         setLoading(false);
         setLocation({
-            latitude: currentLocation.latitude,
-            longitude: currentLocation.longitude,
-            accuracy: currentLocation.accuracy,
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            accuracy: position.coords.accuracy,
         });
     }
 
