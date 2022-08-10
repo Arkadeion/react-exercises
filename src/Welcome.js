@@ -5,6 +5,7 @@ import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
+import { CurrentLocation } from "./CurrentLocation";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { GithubUserList } from "./GithubUserList";
 import { LanguageContext } from "./LanguageContext";
@@ -61,7 +62,8 @@ export class Welcome extends React.Component {
                     <Colors items={[{ id: 1, name: 'Green' }, { id: 2, name: 'Red' }, { id: 3, name: 'Blue' }, { id: 4, name: 'Black' }]} />
                     <Container title="Todo List Container" />
                     <Sum />
-                    <GithubUserList />
+                    <CurrentLocation />
+{/*                     <GithubUserList /> */}
                 </div></div>
 
         )
