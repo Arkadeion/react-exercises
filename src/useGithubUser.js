@@ -32,6 +32,7 @@ export function useGithubUser({username}) {
             user: user,
             loading: loading,
             error: error,
+            fetchUser: fetchUser,
         }
     )
 }
