@@ -7,11 +7,12 @@ import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { CurrentLocation } from "./CurrentLocation";
 import { DisplayLanguage } from "./DisplayLanguage";
-import { GithubUserList } from "./GithubUserList";
+import { FilteredList } from "./FilteredList";
 import { LanguageContext } from "./LanguageContext";
 import { Login } from "./Login";
 import { Sum } from "./Sum";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import { list } from "./UserList"
 
 export class Welcome extends React.Component {
 
@@ -63,7 +64,7 @@ export class Welcome extends React.Component {
                     <Container title="Todo List Container" />
                     <Sum />
                     <CurrentLocation />
-{/*                     <GithubUserList /> */}
+                    <FilteredList list={list} />
                 </div></div>
 
         )
