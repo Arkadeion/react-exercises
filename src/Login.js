@@ -49,7 +49,6 @@
     }
 } */
 
-import { useEffect, useRef } from "react"
 import { useLogin } from "./useLogin"
 
 export function Login({ _onLogin }) {

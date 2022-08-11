@@ -1,5 +1,6 @@
 import React from "react";
 import { Age } from "./Age";
+import { CarDetails } from "./CarDetails";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
@@ -13,6 +14,7 @@ import { Login } from "./Login";
 import { Sum } from "./Sum";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { list } from "./UserList"
+import { defaultCarData } from "./DefaultCarData"
 
 export class Welcome extends React.Component {
 
@@ -65,6 +67,7 @@ export class Welcome extends React.Component {
                     <Sum />
                     <CurrentLocation />
                     <FilteredList list={list} />
+                    <CarDetails initialData={defaultCarData} />
                 </div></div>
 
         )
