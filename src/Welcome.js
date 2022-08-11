@@ -1,14 +1,20 @@
 import React from "react";
 import { Age } from "./Age";
+import { CarDetails } from "./CarDetails";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
+import { CurrentLocation } from "./CurrentLocation";
 import { DisplayLanguage } from "./DisplayLanguage";
+import { FilteredList } from "./FilteredList";
 import { LanguageContext } from "./LanguageContext";
 import { Login } from "./Login";
+import { Sum } from "./Sum";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import { list } from "./UserList"
+import { defaultCarData } from "./DefaultCarData"
 
 export class Welcome extends React.Component {
 
@@ -24,6 +30,10 @@ export class Welcome extends React.Component {
 
     onLogin = (data) => {
         console.log(data);
+    }
+
+    onCounterChange = (counter) => {
+        return console.log(`The current value of the counter is: ${counter}`)
     }
 
     render() {
@@ -48,12 +58,16 @@ export class Welcome extends React.Component {
                         <DisplayLanguage />
                     </LanguageContext.Provider>
                     <Counter initialValue={0} increaseValue={1} interval={1000} />
-                    <ClickCounter />
+                    <ClickCounter onCounterChange={this.onCounterChange} initialValue={0} />
                     <ClickTracker />
                     <Login _onLogin={this.onLogin} />
                     <UncontrolledLogin _onLogin={this.onLogin} />
                     <Colors items={[{ id: 1, name: 'Green' }, { id: 2, name: 'Red' }, { id: 3, name: 'Blue' }, { id: 4, name: 'Black' }]} />
                     <Container title="Todo List Container" />
+                    <Sum />
+                    <CurrentLocation />
+                    <FilteredList list={list} />
+                    <CarDetails initialData={defaultCarData} />
                 </div></div>
 
         )

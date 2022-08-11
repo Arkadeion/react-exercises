@@ -1,4 +1,5 @@
 import React from "react";
+import { FunctionWelcome } from "./FunctionWelcome";
 import { Welcome } from "./Welcome";
 
 export class InteractiveWelcome extends React.Component {
@@ -21,6 +22,7 @@ export class InteractiveWelcome extends React.Component {
                     <span className="mr-4 text-2xl font-bold">Insert your username here:</span>
                     <input className="border-2 border-black mb-5" name="username" value={this.state.value} onChange={this.handleInput} />
                 </div>
+                <FunctionWelcome name={this.state.value} age={28} />
                 <Welcome name={this.state.value} age={28} />
             </div>
         )
