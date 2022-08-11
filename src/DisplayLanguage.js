@@ -28,7 +28,7 @@ export function DisplayLanguage() {
     const language = useContext(LanguageContext);
 
     return (
-        <div className="bg-white rounded-xl border-2 border-black max-w-fit p-4 mt-4 mb-8">
+        <div className="bg-white rounded-xl border-2 border-slate max-w-fit p-4 mt-4 mb-8">
             {language === 'en' ? <h1 className="text-2xl font-bold mb-4" >The current language is {Language[language].lang}</h1> : <></>}
             {language === 'it' ? <h1 className="text-2xl font-bold mb-4" >La lingua corrente è {Language[language].lang}</h1> : <></>}
         </div>
