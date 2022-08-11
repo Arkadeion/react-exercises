@@ -49,11 +49,18 @@
     }
 } */
 
+import { useEffect, useRef } from "react"
 import { useLogin } from "./useLogin"
 
 export function Login({ _onLogin }) {
 
    const { data, handleInput, getFormData, handleResetForm } = useLogin({ _onLogin })
+
+/*    const focusRef = useRef();
+
+   useEffect(() => {
+    focusRef.current.focus()
+   }, []) */
 
     return (
         <div className="bg-white rounded-xl border-2 border-black max-w-fit p-4 mb-8">
