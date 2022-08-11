@@ -1,13 +1,16 @@
 import React from "react";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import './index.css';
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 export class App extends React.Component {
     render() {
         return (
             <div>
-{/*                 <HelloWorld  /> */}
-                <InteractiveWelcome />
+                <Routes>
+                    <Route path='/' element={<InteractiveWelcome />} />
+                </Routes>
             </div>
         )
     }
