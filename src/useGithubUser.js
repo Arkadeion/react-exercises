@@ -9,6 +9,7 @@ export function useGithubUser({username}) {
 
     async function fetchUser(username) {
 
+        setUser(null);
         setLoading(true);
         setError(null);
         const response = await fetch(`https://api.github.com/users/${username}`);
