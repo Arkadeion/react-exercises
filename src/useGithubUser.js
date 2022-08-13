@@ -22,7 +22,13 @@ export function useGithubUser({username}) {
         }
 
         setLoading(false);
-        setUser(json);
+
+        if (json.name !== null) {
+            setUser(json);
+        } else {
+            setError(new Error("User doesn't have a name."));
+        }
+
     }
 
     useEffect(() => {
