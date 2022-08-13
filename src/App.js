@@ -3,6 +3,7 @@ import './index.css';
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Welcome } from "./Welcome";
+import { Counter } from "./Counter";
 
 export class App extends React.Component {
     render() {
@@ -10,10 +11,11 @@ export class App extends React.Component {
             <div className="welcome p-6 m-4">
                 <div>
                     <h1 className="text-2xl font-semibold mb-4">Single-Page Application</h1>
-                    <hr class="border-2 border-red-500 mb-4" />
+                    <hr className="border-2 border-red-500 mb-4" />
                 </div>
                 <Routes>
                     <Route path='/' element={<Welcome name={'Franco'} />} />
+                    <Route path='counter' element={<Counter initialValue={0} increaseValue={1} interval={1000} />} />
                 </Routes>
             </div>
         )
