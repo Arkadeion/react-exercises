@@ -10,6 +10,7 @@ export function useGithubUser({username}) {
     async function fetchUser(username) {
 
         setLoading(true);
+        setError(null);
         const response = await fetch(`https://api.github.com/users/${username}`);
         const json = await response.json();
 
