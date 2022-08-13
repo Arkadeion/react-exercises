@@ -6,8 +6,12 @@ import { Counter } from "./Counter";
 import { NotFound } from './NotFound';
 import { GithubUserList } from './GithubUserList';
 import { GithubUser } from './GithubUser';
+import { useState } from 'react';
+import { AddUser } from './AddUser';
 
 export function App() {
+
+    const [userlist, setUserlist] = useState(['Arkadeion', 'Develhope', 'mirkoRainer'])
 
     return (
         <div className="welcome p-6 m-4">
@@ -22,8 +26,9 @@ export function App() {
             <Routes>
                 <Route path='/' element={<Welcome name={'Franco'} />} />
                 <Route path='counter' element={<Counter initialValue={0} increaseValue={1} interval={1000} />} />
-                <Route path='users' element={<GithubUserList />}>
+                <Route path='users' element={<GithubUserList userlist={userlist} />}>
                     <Route path=':username' element={<GithubUser />} />
+                    <Route index element={<AddUser userlist={userlist} setUserlist={setUserlist} />} />
                 </Route>
                 <Route path='*' element={<NotFound />} />
             </Routes>
