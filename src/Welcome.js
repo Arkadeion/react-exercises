@@ -1,6 +1,6 @@
 import React from "react";
 import { Age } from "./Age";
-import { CarDetails } from "./CarDetails";
+/* import { CarDetails } from "./CarDetails";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
@@ -14,7 +14,7 @@ import { Login } from "./Login";
 import { Sum } from "./Sum";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { list } from "./UserList"
-import { defaultCarData } from "./DefaultCarData"
+import { defaultCarData } from "./DefaultCarData" */
 
 export class Welcome extends React.Component {
 
@@ -41,9 +41,9 @@ export class Welcome extends React.Component {
             <div >
                 <div className="bg-white rounded-xl border border-red-700 p-3 mb-5 max-w-xs">
                     <h1 className="text-2xl font-bold mb-4">Welcome, {this.props.name}!</h1>
-                    <Age age={this.props.age} />
+                    <Age age={28} />
                 </div>
-                <div>
+{/*                 <div>
                     <div>
                         <select value={this.state.language} onChange={this.handleLanguageChange}>
                             <option value='en'>
@@ -68,8 +68,8 @@ export class Welcome extends React.Component {
                     <CurrentLocation />
                     <FilteredList list={list} />
                     <CarDetails initialData={defaultCarData} />
-                </div></div>
-
+                </div> */}
+            </div>
         )
     }
 }
