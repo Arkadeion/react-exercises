@@ -5,6 +5,7 @@ import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
 import { ShowGithubUser } from "./ShowGithubUser";
 import { useState } from 'react';
+import { NotFound } from './NotFound';
 
 export function App() {
 
@@ -35,6 +36,7 @@ export function App() {
                 <Route path='/' element={<Welcome name={'Franco'} />} />
                 <Route path='counter' element={<Counter initialValue={0} increaseValue={1} interval={1000} />} />
                 <Route path='users/:username' element={<ShowGithubUser />} />
+                <Route path='*' element={<NotFound />} />
             </Routes>
         </div>
     )
