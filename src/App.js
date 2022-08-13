@@ -13,11 +13,11 @@ export function App() {
         <div className="welcome p-6 m-4">
             <div>
                 <h1 className="text-2xl font-semibold mb-4">Single-Page Application</h1>
-                <hr className="border-2 border-red-500 mb-4" />
+                <hr className="border-2 border-red-600 mb-4" />
                 <Link className='text-lg font-semibold underline text-cyan-500 mr-3' to='/'>Home</Link>
                 <Link className='text-lg font-semibold underline text-cyan-500 mr-3' to='counter'>Counter</Link>
                 <Link className='text-lg font-semibold underline text-cyan-500 mr-3' to='users' >Users</Link>
-                <hr className="border-2 border-red-500 mt-4 mb-4" />
+                <hr className="border-2 border-red-600 mt-4 mb-4" />
             </div>
             <Routes>
                 <Route path='/' element={<Welcome name={'Franco'} />} />
