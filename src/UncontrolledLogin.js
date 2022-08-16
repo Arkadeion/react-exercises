@@ -15,6 +15,12 @@ export class UncontrolledLogin extends React.Component {
         this.props._onLogin(loginData);
     }
 
+    usernameRef = React.createRef();
+
+    componentDidMount(){
+        this.usernameRef.current.focus(); 
+     }
+
     render() {
         return (
             <div>
@@ -23,7 +29,7 @@ export class UncontrolledLogin extends React.Component {
                 </div>
                 <div>
                     <form onSubmit={this.handleSubmit}>
-                        <input name="username" autoFocus />
+                        <input name="username" ref={this.usernameRef} />
                         <input name="password" type='password' />
                         <input name="remember" type='checkbox' />
                         <button name="submit" type='submit' >Login</button>
