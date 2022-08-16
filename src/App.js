@@ -1,7 +1,6 @@
 import React from "react";
-import { HelloWorld } from "./HelloWorld";
 import { InteractiveWelcome } from "./InteractiveWelcome";
-import './index.css';
+
 
 export class App extends React.Component {
     render() {
