@@ -13,10 +13,13 @@ export class TodoList extends React.Component {
 
             this.setState(() => {
                 return {
-                    items: [...this.state.items, this.state.inputValue],
-                    inputValue: '',
+                    items: [...this.state.items, this.state.inputValue]
                 }
             })
+
+            this.setState({
+                    inputValue: '',
+                })
         }}
 
         handleInput = (event) => {
@@ -31,7 +34,7 @@ export class TodoList extends React.Component {
             return (
                 <div>
                     <div>
-                        <input onChange={this.handleInput} name="newTodo" />
+                        <input onChange={this.handleInput} value={this.state.inputValue} name="newTodo" />
                         <button onClick={this.addNewTodo} >Add Item</button>
                     </div>
                     <div>
