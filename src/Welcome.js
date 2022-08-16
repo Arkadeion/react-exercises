@@ -5,8 +5,6 @@ import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
-import { DisplayLanguage } from "./DisplayLanguage";
-import { LanguageContext } from "./LanguageContext";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 
