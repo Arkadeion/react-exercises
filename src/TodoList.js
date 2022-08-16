@@ -3,39 +3,44 @@ import React from "react";
 export class TodoList extends React.Component {
 
     state = {
-        items: ['Go to work', 'Go to the gym', 'Clean up the house']
+        inputValue: '',
+        items: ['Go to work', 'Go to the gym', 'Clean up the house'],
     }
 
     addNewTodo = (event) => {
-        
-        let newTodo = event.target.previousSibling.value;
 
-        let _items = [...this.state.items]
+        if (this.state.inputValue !== '') {
 
-        _items.push(newTodo);
+            this.setState(() => {
+                return {
+                    items: [...this.state.items, this.state.inputValue],
+                    inputValue: '',
+                }
+            })
+        }}
 
-        this.setState({
-            items: _items
-        })
-        
-        event.target.previousSibling.value = '';
+        handleInput = (event) => {
 
-    }
+            this.setState({
+                inputValue: event.target.value,
+            })
 
-    render() {
-        return (
-            <div>
+        }
+
+        render() {
+            return (
                 <div>
-                    <input name="newTodo" />
-                    <button onClick={this.addNewTodo} >Add Item</button>
+                    <div>
+                        <input onChange={this.handleInput} name="newTodo" />
+                        <button onClick={this.addNewTodo} >Add Item</button>
+                    </div>
+                    <div>
+                        <ul>
+                            {this.state.items.map((todo) => <li>{todo}</li>)}
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        {this.state.items.map((todo) => <li>{todo}</li>)}
-                    </ul>
-                </div>
-            </div>
 
-        )
+            )
+        }
     }
-}
