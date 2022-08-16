@@ -7,7 +7,7 @@ export class TodoList extends React.Component {
         items: ['Go to work', 'Go to the gym', 'Clean up the house'],
     }
 
-    addNewTodo = (event) => {
+    addNewTodo = () => {
 
         if (this.state.inputValue !== '') {
 
